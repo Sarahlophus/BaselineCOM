@@ -72,7 +72,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// update product
+// update product by id
 router.put("/:id", (req, res) => {
   // update product data
   Product.update(req.body, {
@@ -109,6 +109,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// delete product by id
 router.delete("/:id", (req, res) => {
   Product.destroy({
     where: {
